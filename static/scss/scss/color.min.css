@@ -1,0 +1,1 @@
+body:before{white-space:pre;font-family:monospace;content:"Error: Undefined variable: \"$px-bg-2\".\A         on line 4 of E:\Portofolio_website\static\scss\scss\color.scss\A \A 1: /* Bg color\A 2: ----------------------------*/\A 3: .dark-bg {\A 4: 	background: $px-bg-2;\A 5: 	.theme-light & {\A 6: 		background: $px-gray;\A 7: 	}\A 8: }"}

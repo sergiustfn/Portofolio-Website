@@ -1,0 +1,1 @@
+body:before{white-space:pre;font-family:monospace;content:"Error: Undefined mixin 'up-sm'.\A         on line 2 of E:\Portofolio_website\static\scss\scss\header.scss, in `up-sm'\A         from line 2 of E:\Portofolio_website\static\scss\scss\header.scss\A \A 1: .main-left {\A 2: 	@include up-sm {\A 3: 		padding-left: 80px;\A 4: 	}\A 5: }\A 6: \A 7: .header-left {"}
