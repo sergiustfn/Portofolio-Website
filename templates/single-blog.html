@@ -1,75 +1,141 @@
 {% extends 'base.html' %}
 {% load static %}
-    <!-- Main Start -->
+<!-- Main Start -->
 {% block content %}
     <main class="main-left">
         <div class="single-blog">
             <div class="container">
-                <div class="blog-feature-img" >
-                    <img src="{{ project.image.url }}" title="" alt="" style="object-fit: cover" width="1200px" height="750px">
+                <div class="blog-feature-img">
+                    <img src="{{ project.image.url }}" title="" alt="" style="object-fit: cover" width="1200px"
+                         height="750px">
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
 
                         <article class="article">
-                             <div class="nav tag-cloud">
-                                  {% for tag in project.project_tags.all %}
-                                <a href="#">{{ tag }}</a>
-                                 {% endfor %}
+                            <div class="nav tag-cloud">
+                                {% for tag in project.project_tags.all %}
+                                    <a href="#">{{ tag }}</a>
+                                {% endfor %}
                             </div>
                             <div class="article-title">
                                 <h2>{{ project.title }}</h2>
                                 <div class="media">
                                     <div class="media-body">
                                         <label>Manta Sergiu Stefan</label>
-                                        <span>{{ project.date}}</span>
+                                        <span>{{ project.date }}</span>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="article-content">
                                 <p>{{ project.description }}</p>
+
                                 <h4>Check the live version of my project</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                                    <p class="blockquote-footer">Someone famous in <cite title="Source Title">Dick Grayson</cite></p>
-                                </blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <p><a href="https://elysian.ro">{{ project.project_link }}</a></p>
+                                {#                                <blockquote>#}
+                                {#                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>#}
+                                {#                                    <p class="blockquote-footer">Someone famous in <cite title="Source Title">Dick Grayson</cite></p>#}
+                                {#                                </blockquote>#}
                             </div>
-
                         </article>
-                        <div class="contact-form article-comment">
-                            <h4>Leave a Reply</h4>
-
-                            <form id="contact-form" method="POST">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input name="Name" id="name" placeholder="Name *" class="form-control" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input name="Email" id="email" placeholder="Email *" class="form-control" type="email">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <textarea name="message" id="message" placeholder="Your message *" rows="4" class="form-control"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="send">
-                                            <button class="px-btn px-btn-white"><span>Submit</span> <i class="arrow"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
+                        {#                        <div class="contact-form article-comment">#}
+                        {#                            <h4>Leave a Reply</h4>#}
+                        {##}
+                        {#                            <form id="contact-form" method="POST">#}
+                        {#                                <div class="row">#}
+                        {#                                    <div class="col-md-6">#}
+                        {#                                        <div class="form-group">#}
+                        {#                                            <input name="Name" id="name" placeholder="Name *" class="form-control"#}
+                        {#                                                   type="text">#}
+                        {#                                        </div>#}
+                        {#                                    </div>#}
+                        {#                                    <div class="col-md-6">#}
+                        {#                                        <div class="form-group">#}
+                        {#                                            <input name="Email" id="email" placeholder="Email *" class="form-control"#}
+                        {#                                                   type="email">#}
+                        {#                                        </div>#}
+                        {#                                    </div>#}
+                        {#                                    <div class="col-md-12">#}
+                        {#                                        <div class="form-group">#}
+                        {#                                            <textarea name="message" id="message" placeholder="Your message *" rows="4"#}
+                        {#                                                      class="form-control"></textarea>#}
+                        {#                                        </div>#}
+                        {#                                    </div>#}
+                        {#                                    <div class="col-md-12">#}
+                        {#                                        <div class="send">#}
+                        {#                                            <button class="px-btn px-btn-white"><span>Submit</span> <i#}
+                        {#                                                    class="arrow"></i></button>#}
+                        {#                                        </div>#}
+                        {#                                    </div>#}
+                        {#                                </div>#}
+                        {#                            </form>#}
+                        {#                        </div>#}
                     </div>
+
+                    <section id="work" class=" blue-bg">
+                        <h6> Project Screenshots</h6>
+                        <div class="container">
+                            <div class="portfolio-content grid-gutter-lg grid-col-3 lightbox-gallery"
+                                 style="margin-top: 1px">
+                                {% for image in images %}
+                                    <div class="grid-item photoshop">
+                                        <div class="portfolio-box-01">
+                                            <div class="portfolio-info">
+                                                <h5 class="white-color font-weight-bold">{{ project.date }}</h5>
+                                                <span>{{ project.title}}</span>
+                                            </div>
+                                            <div class="portfolio-img" style="vertical-align:top">
+                                                <img src="{{ image.image_1.url }}" title="" alt="" style="object-fit: cover">
+                                                <div class="portfolio-icon" >
+                                                    <a href="{{ image.image_1.url }}" class="gallery-link">
+                                                        <span class="ti-plus"></span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> <!-- grid item -->
+                                    <div class="grid-item product branding">
+                                    <div class="portfolio-box-01">
+                                        <div class="portfolio-info">
+                                            <h5 class="white-color font-weight-bold">{{ project.title }}</h5>
+                                            <span>{{ project.project_link }}</span>
+                                        </div>
+                                        <div class="portfolio-img">
+                                            <img src="{{ image.image_2.url }}" title="" alt="">
+                                            <div class="portfolio-icon">
+                                                <a href="{{ image.image_2.url }}" class="gallery-link">
+                                                    <span class="ti-plus"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                     <div class="grid-item product branding">
+                                    <div class="portfolio-box-01">
+                                        <div class="portfolio-info">
+                                            <h5 class="white-color font-weight-bold">{{ project.title }}</h5>
+                                            <span>{{ project.project_link }}</span>
+                                        </div>
+                                        <div class="portfolio-img">
+                                            <img src="{{ image.image_2.url }}" title="" alt="">
+                                            <div class="portfolio-icon">
+                                                <a href="{{ image.image_3.url }}" class="gallery-link">
+                                                    <span class="ti-plus"></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
-        </div>
+        </div>     <!-- End Portfolio -->
     </main>
-    <!-- End Main -->
+
+
 {% endblock content %}

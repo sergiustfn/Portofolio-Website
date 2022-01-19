@@ -4,7 +4,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import render
 
-from projects.models import Project, FilesAdmin
+from projects.models import Project, FilesAdmin, Images
 from django.http import HttpResponse, Http404
 
 
@@ -40,8 +40,9 @@ def download(request, path):
 
 def project_detail(request, pk):
     project = Project.objects.get(id=pk)
+    images = Images.objects.filter(project_id=pk)
 
-    context = {'project': project}
+    context = {'project': project, 'images': images}
     return render(request, 'single-blog.html', context)
 
 
