@@ -13,12 +13,13 @@ def homepage(request):
         name = request.POST['Name']
         email = request.POST['Email']
         subject = request.POST['Subject']
-        message = f" Name: {name} \n \n Email: {email}" + '\n' + '\n' + request.POST['message']
+        body = request.POST['message']
+        message = f" Name: {name} \n \n Email: {email}" + '\n' + '\n' + body
 
         send_mail(
             subject,
             message,
-            'helpasoul24@gmail.com',
+            'sergiustefanmanta@gmail.com',
             ['m.sergiu01@gmail.com'],
         )
         return render(request, 'index.html', {'subject': subject})
