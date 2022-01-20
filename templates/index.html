@@ -26,11 +26,11 @@
                             <h6>Hello, My name is</h6>
                             <h1 class="font-alt">Manta Sergiu Stefan</h1>
                             <p class="lead">Junior Python Developer &nbsp;|&nbsp; Django Developer</p>
-                            <p class="desc">I design and develop services for customers of all sizes, specializing in
-                                creating stylish, modern websites, web services and online stores.</p>
+                            <p class="desc">Welcome to my portofolio website ! This website was created by me using Django
+                            and Bootstrap4. </p>
                             <div class="btn-bar">
                                 {% for post in file %}
-                                    <a class="font-alt" href="{{ post.admin_upload.url }}"
+                                    <a class="font-weight-bolder" href="{{ post.admin_upload.url }}"
                                        download="{{ post.admin_upload.url }}">Download CV</a>
                                 {% endfor %}
                             </div>
@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hb-me" style="background-image: url({% static 'img/pozaEU-Recovered2.jpg' %}); padding-left: 200px"></div>
+            <div class="hb-me" style="background-image: url({% static 'images/wallpaperflare.com_wallpaper.png' %}); "></div>
         </section>
         <!-- End Home -->
         <!-- about us -->
@@ -162,7 +162,7 @@
                 <div class="separated"></div>
                 <!-- End separated -->
 
-
+            </div>
         </section>
 
         <!-- End about us -->
