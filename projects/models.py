@@ -7,7 +7,7 @@ class Project(models.Model):
     image = models.ImageField()
     date = models.DateTimeField(auto_now_add=True)
     project_tags = models.ManyToManyField('ProjectTag')
-    project_link = models.CharField(max_length=100)
+    project_link = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self):
         return self.title

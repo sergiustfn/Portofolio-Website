@@ -6,8 +6,8 @@
         <div class="single-blog">
             <div class="container">
                 <div class="blog-feature-img">
-                    <img src="{{ project.image.url }}" title="" alt="" style="object-fit: cover" width="1200px"
-                         height="750px">
+                    <img src="{{ project.image.url }}" title="" alt=""
+                         >
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
@@ -32,7 +32,11 @@
                                 <p>{{ project.description }}</p>
 
                                 <h4>Check the live version of my project</h4>
-                                <p><a href="https://elysian.ro">{{ project.project_link }}</a></p>
+                                {% if project.project_link %}
+                                    <p><a href={{ project.project_link }}>Project Link</a></p>
+                                {% else %}
+                                    <p><a href="https://google.com">To be deployed</a></p>
+                                {% endif %}
                                 {#                                <blockquote>#}
                                 {#                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>#}
                                 {#                                    <p class="blockquote-footer">Someone famous in <cite title="Source Title">Dick Grayson</cite></p>#}
@@ -82,12 +86,16 @@
                                     <div class="grid-item photoshop">
                                         <div class="portfolio-box-01">
                                             <div class="portfolio-info">
-                                                <h5 class="white-color font-weight-bold">{{ project.date }}</h5>
-                                                <span>{{ project.title}}</span>
+                                                <h5 class="white-color font-weight-bold">{{ project.title }}</h5>
+                                                {% for tag in project.project_tags.all %}
+                                                    <span>{{ tag }}</span>
+                                                {% endfor %}
+
                                             </div>
                                             <div class="portfolio-img" style="vertical-align:top">
-                                                <img src="{{ image.image_1.url }}" title="" alt="" style="object-fit: cover">
-                                                <div class="portfolio-icon" >
+                                                <img src="{{ image.image_1.url }}" title="" alt=""
+                                                     style="object-fit: cover">
+                                                <div class="portfolio-icon">
                                                     <a href="{{ image.image_1.url }}" class="gallery-link">
                                                         <span class="ti-plus"></span>
                                                     </a>
@@ -96,36 +104,40 @@
                                         </div>
                                     </div> <!-- grid item -->
                                     <div class="grid-item product branding">
-                                    <div class="portfolio-box-01">
-                                        <div class="portfolio-info">
-                                            <h5 class="white-color font-weight-bold">{{ project.title }}</h5>
-                                            <span>{{ project.project_link }}</span>
-                                        </div>
-                                        <div class="portfolio-img">
-                                            <img src="{{ image.image_2.url }}" title="" alt="">
-                                            <div class="portfolio-icon">
-                                                <a href="{{ image.image_2.url }}" class="gallery-link">
-                                                    <span class="ti-plus"></span>
-                                                </a>
+                                        <div class="portfolio-box-01">
+                                            <div class="portfolio-info">
+                                                <h5 class="white-color font-weight-bold">{{ project.title }}</h5>
+                                                {% for tag in project.project_tags.all %}
+                                                    <span>{{ tag }}</span>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="portfolio-img">
+                                                <img src="{{ image.image_2.url }}" title="" alt="">
+                                                <div class="portfolio-icon">
+                                                    <a href="{{ image.image_2.url }}" class="gallery-link">
+                                                        <span class="ti-plus"></span>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    </div>
-                                     <div class="grid-item product branding">
-                                    <div class="portfolio-box-01">
-                                        <div class="portfolio-info">
-                                            <h5 class="white-color font-weight-bold">{{ project.title }}</h5>
-                                            <span>{{ project.project_link }}</span>
-                                        </div>
-                                        <div class="portfolio-img">
-                                            <img src="{{ image.image_2.url }}" title="" alt="">
-                                            <div class="portfolio-icon">
-                                                <a href="{{ image.image_3.url }}" class="gallery-link">
-                                                    <span class="ti-plus"></span>
-                                                </a>
+                                    <div class="grid-item product branding">
+                                        <div class="portfolio-box-01">
+                                            <div class="portfolio-info">
+                                                <h5 class="white-color font-weight-bold">{{ project.title }}</h5>
+                                                {% for tag in project.project_tags.all %}
+                                                    <span>{{ tag }}</span>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="portfolio-img">
+                                                <img src="{{ image.Image_3.url }}" title="" alt="">
+                                                <div class="portfolio-icon">
+                                                    <a href="{{ image.Image_3.url }}" class="gallery-link">
+                                                        <span class="ti-plus"></span>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
                                     </div>
                                 {% endfor %}
 
