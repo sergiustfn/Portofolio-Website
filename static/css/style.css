@@ -845,7 +845,7 @@ mark {
 /* Section
 ---------------------*/
 .section {
-  padding: 100px 0;
+  padding: 10px 0;
   position: relative;
 }
 @media (max-width: 991px) {
@@ -1025,8 +1025,8 @@ mark {
   min-height: 100vh;
 }
 .home-banner .type-box {
-  padding-top: 90px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 1px;
 }
 .home-banner .type-box h6 {
   color: #fff;

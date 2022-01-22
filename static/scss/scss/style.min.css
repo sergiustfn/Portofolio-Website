@@ -1,1 +1,5 @@
-body:before{white-space:pre;font-family:monospace;content:"Error: Undefined mixin 'down-md'.\A         on line 6 of E:\Portofolio_website\static\scss\scss\style.scss, in `down-md'\A         from line 6 of E:\Portofolio_website\static\scss\scss\style.scss\A \A 1: /* Section\A 2: ---------------------*/\A 3: .section {\A 4: 	padding: 100px 0;\A 5: 	position: relative;\A 6: 	@include down-md {\A 7: 		padding-top: 80px;\A 8: 		padding-bottom: 80px;\A 9: 	}\A 10: 	@include down-sm {\A 11: 		padding-top: 60px;"}
+body:before {
+    white-space: pre;
+    font-family: monospace;
+    content: "Error: Undefined mixin 'down-md'.\A         on line 6 of E:\Portofolio_website\static\scss\scss\style.scss, in `down-md'\A         from line 6 of E:\Portofolio_website\static\scss\scss\style.scss\A \A 1: /* Section\A 2: ---------------------*/\A 3: .section {\A 4: 	padding: 100px 0;\A 5: 	position: relative;\A 6: 	@include down-md {\A 7: 		padding-top: 80px;\A 8: 		padding-bottom: 80px;\A 9: 	}\A 10: 	@include down-sm {\A 11: 		padding-top: 60px;"
+}
